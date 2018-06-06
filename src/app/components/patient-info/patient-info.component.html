@@ -83,10 +83,34 @@
           <div class="card-body">
 
             <ul class="list-group">
-                <li class="list-group-item list-group-item-action" *ngFor="let tr of p.treatments" [ngClass]="tr.color" (click)="tr.completed = !tr.completed">
-                  <input type="checkbox" [(ngModel)]="tr.completed" class="mr-2" />
-                  <span>{{tr.name}}</span>
+                <li class="list-group-item list-group-item-action list-group-item-primary"  (click)="t1 = !t1">
+                  <input type="checkbox" [(ngModel)]="t1" class="mr-2" />
+                  <span>IV Diuretics</span>
                 </li>
+                <li class="list-group-item list-group-item-action list-group-item-success"  (click)="t2 = !t2">
+                    <input type="checkbox" [(ngModel)]="t2" class="mr-2" />
+                    <span>Ace Inhibitors</span>
+                </li>
+                <li class="list-group-item list-group-item-action list-group-item-success"  (click)="t3 = !t3">
+                    <input type="checkbox" [(ngModel)]="t3" class="mr-2" />
+                    <span>Beta Blockers</span>
+                </li>
+                <li class="list-group-item list-group-item-action list-group-item-success"  (click)="t4 = !t4">
+                    <input type="checkbox" [(ngModel)]="t4" class="mr-2" />
+                    <span>MRA</span>
+                </li>
+                <li class="list-group-item list-group-item-action list-group-item-success"  (click)="t5 = !t5">
+                    <input type="checkbox" [(ngModel)]="t5" class="mr-2" />
+                    <span>Entresto</span>
+                  </li>
+                  <li class="list-group-item list-group-item-action list-group-item-dark"  (click)="t6 = !t6">
+                      <input type="checkbox" [(ngModel)]="t6" class="mr-2" />
+                      <span>Nitrate/Hydrallazine</span>
+                      <div *ngIf="t6" class="form-group">
+                          <label for="exampleFormControlTextarea1">Notes</label>
+                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                  </li>
               </ul>
           </div>
         </div>
@@ -121,7 +145,6 @@
           <div class="form-group px-3">
               <label>Initial Consultation Date</label>
               <input type="date" class="form-control" />
-              <button type="button" class="btn btn-success float-right mt-2">Save Details</button>
           </div>
           
         </div>
