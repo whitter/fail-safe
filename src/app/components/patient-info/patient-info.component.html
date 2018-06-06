@@ -40,43 +40,60 @@
           </div>
       </div>
   </div>
-  <div class="p-2">
-
-    <div class="card border-primary|secondary|success|danger|warning|info|light|dark|link">
-      <div class="card-body">
-        <h4 class="card-title">Clinical Info</h4>
-        <dl>
-          <dt>HF Type</dt>
-          <dd>{{p.hfType}}</dd>
-
-          <dt>Ischemic Aetiology</dt>
-          <dd>{{p.aetiology}}</dd>
-
-          <dt>Co-Mobidities</dt>
-          <dd>
-            <ul class="list-group">
-              <li class="list-group-item" *ngFor="let m of p.coMorbities">{{m.name}}</li>
-            </ul>
-          </dd>
-
-          <dt>Physical Examinations</dt>
-          <dd>
-            <div class="list-group">
-              <a href="#" *ngFor="let ex of p.examinations" class="list-group-item list-group-item-action">{{ex.name}}</a>
-            </div>
-          </dd>
-
-          <dt>Treatment</dt>
-          <dd>
-              <ul class="list-group">
-                  <li class="list-group-item list-group-item-action" *ngFor="let tr of p.treatments" [ngClass]="tr.color" (click)="tr.completed = !tr.completed">
-                    <input type="checkbox" [(ngModel)]="tr.completed" class="mr-2" />
-                    <span>{{tr.name}}</span>
-                  </li>
+  <div class="p-4 w-100">
+  <div class="card-group">
+      <div class="card">
+        <div class="bg-primary p-3 text-center">
+          <span class="fas fa-heartbeat fa-4x text-white"></span>
+          <h5 class="card-title text-white">Heart Failure Details</h5>
+        </div>
+        <div class="card-body">
+          <dl>
+              <dt>HF Type</dt>
+              <dd>{{p.hfType}}</dd>
+    
+              <dt>Ischemic Aetiology</dt>
+              <dd>{{p.aetiology}}</dd>
+    
+              <dt>Co-Mobidities</dt>
+              <dd>
+                <ul class="list-group">
+                  <li class="list-group-item" *ngFor="let m of p.coMorbities">{{m.name}}</li>
                 </ul>
-          </dd>
-        </dl>
+              </dd>
+            </dl>
+        </div>
+      </div>
+      <div class="card">
+        <div class="bg-primary p-3 text-center">
+          <span class="fas fa-stethoscope fa-4x text-white"></span>
+          <h5 class="card-title text-white">Physical Examinations</h5>
+        </div>
+        <div class="card-body">
+          <div class="list-group">
+            <a href="#" *ngFor="let ex of p.examinations" class="list-group-item list-group-item-action">{{ex.name}}</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="bg-primary p-3 text-center">
+          <span class="fas fa-prescription-bottle-alt fa-4x text-white"></span>
+          <h5 class="card-title text-white">Treatment</h5>
+        </div>
+        <div class="card-body">
+
+          <ul class="list-group">
+              <li class="list-group-item list-group-item-action" *ngFor="let tr of p.treatments" [ngClass]="tr.color" (click)="tr.completed = !tr.completed">
+                <input type="checkbox" [(ngModel)]="tr.completed" class="mr-2" />
+                <span>{{tr.name}}</span>
+              </li>
+            </ul>
+
+        </div>
       </div>
     </div>
+
   </div>
+
+
 </div>
