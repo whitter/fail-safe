@@ -7,7 +7,7 @@ export var allPatients:Patient [] = [
     id: 1,
     name:'Harry Keshav',
     dob: moment('1948-04-05'),
-    gender:'Maleng serve',
+    gender:'Male',
     postcode:'B13 8TF',
     admissionDate: moment( '2018-03-27'),
     gp: {
