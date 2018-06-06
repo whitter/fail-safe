@@ -1,5 +1,5 @@
-<div class="d-flex flex-row bd-highlight mb-3 record">
-  <div class="patient-info primary-dark">
+<div class="row bd-highlight mb-3 record">
+  <div class="col-lg-3 col-xl-2 patient-info primary-dark">
       <div class="patient-data primary-darker">
         <h1 class="text-white">{{ p.name }}</h1>
         <dl>
@@ -40,66 +40,94 @@
           </div>
       </div>
   </div>
-  <div class="p-2">
-
-    <div class="card border-primary|secondary|success|danger|warning|info|light|dark|link">
-      <div class="card-body">
-        <h4 class="card-title">Clinical Info</h4>
-        <dl>
-          <dt>HF Type</dt>
-          <dd>{{p.hfType}}</dd>
-
-          <dt>Ischemic Aetiology</dt>
-          <dd>{{p.aetiology}}</dd>
-
-          <dt>Co-Mobidities</dt>
-          <dd>
-            <ul class="list-group">
-              <li class="list-group-item" *ngFor="let m of p.coMorbities">{{m.name}}</li>
-            </ul>
-          </dd>
-
-          <dt>Physical Examinations</dt>
-          <dd>
+  <div class="col p-4 w-100">
+    <div class="card-group">
+        <div class="card">
+          <div class="bg-primary p-3 text-center">
+            <span class="fas fa-heartbeat fa-4x text-white"></span>
+            <h5 class="card-title text-white">Heart Failure Details</h5>
+          </div>
+          <div class="card-body">
+            <dl>
+                <dt>HF Type</dt>
+                <dd>{{p.hfType}}</dd>
+      
+                <dt>Ischemic Aetiology</dt>
+                <dd>{{p.aetiology}}</dd>
+      
+                <dt>Co-Mobidities</dt>
+                <dd>
+                  <ul class="list-group">
+                    <li class="list-group-item" *ngFor="let m of p.coMorbities">{{m.name}}</li>
+                  </ul>
+                </dd>
+              </dl>
+          </div>
+        </div>
+        <div class="card">
+          <div class="bg-primary p-3 text-center">
+            <span class="fas fa-stethoscope fa-4x text-white"></span>
+            <h5 class="card-title text-white">Physical Examinations</h5>
+          </div>
+          <div class="card-body">
             <div class="list-group">
               <a href="#" *ngFor="let ex of p.examinations" class="list-group-item list-group-item-action">{{ex.name}}</a>
             </div>
-          </dd>
+          </div>
+        </div>
+        <div class="card">
+          <div class="bg-primary p-3 text-center">
+            <span class="fas fa-prescription-bottle-alt fa-4x text-white"></span>
+            <h5 class="card-title text-white">Treatment</h5>
+          </div>
+          <div class="card-body">
 
-          <dt>Treatment</dt>
-          <dd>
-              <ul class="list-group">
-                  <li class="list-group-item list-group-item-action" *ngFor="let tr of p.treatments" [ngClass]="tr.color" (click)="tr.completed = !tr.completed">
-                    <input type="checkbox" [(ngModel)]="tr.completed" class="mr-2" />
-                    <span>{{tr.name}}</span>
-                  </li>
-                </ul>
-          </dd>
-
-          <dt>Ceiling of Care</dt>
-          <dd>
             <ul class="list-group">
-              <li class="list-group-item list-group-item-action" (click)="p.ituSuitable = !p.ituSuitable">
-                <input type="checkbox" [(ngModel)]="p.ituSuitable" class="mr-2" />
-                <span>Suitable for ITU</span>
-              </li>
-              <li class="list-group-item list-group-item-action" (click)="p.ccuForCpap = !p.ccuForCpap">
-                  <input type="checkbox" [(ngModel)]="p.ccuForCpap" class="mr-2" />
-                  <span>CCU for CPAP</span>
+                <li class="list-group-item list-group-item-action" *ngFor="let tr of p.treatments" [ngClass]="tr.color" (click)="tr.completed = !tr.completed">
+                  <input type="checkbox" [(ngModel)]="tr.completed" class="mr-2" />
+                  <span>{{tr.name}}</span>
                 </li>
-                <li class="list-group-item list-group-item-action" (click)="p.wardBasedCare = !p.wardBasedCare">
-                    <input type="checkbox" [(ngModel)]="p.wardBasedCare" class="mr-2" />
-                    <span>Ward based care</span>
-                  </li>
-            </ul>
-          </dd>
-        </dl>
-
-        <div class="form-group">
-          <label>Initial Consultation Date</label>
-          <input type="date" class="form-control" />
+              </ul>
+          </div>
         </div>
       </div>
-    </div>
+      <div class="row">
+        <div class="col-md-8 p-4">
+          <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Ceiling of Care</h5>
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-action" (click)="p.ituSuitable = !p.ituSuitable">
+                  <input type="checkbox" [(ngModel)]="p.ituSuitable" class="mr-2" />
+                  <span>Suitable for ITU</span>
+                </li>
+                <li class="list-group-item list-group-item-action" (click)="p.ccuForCpap = !p.ccuForCpap">
+                    <input type="checkbox" [(ngModel)]="p.ccuForCpap" class="mr-2" />
+                    <span>CCU for CPAP</span>
+                  </li>
+                  <li class="list-group-item list-group-item-action" (click)="p.wardBasedCare = !p.wardBasedCare">
+                      <input type="checkbox" [(ngModel)]="p.wardBasedCare" class="mr-2" />
+                      <span>Ward based care</span>
+                    </li>
+              </ul>
+          </div>
+        </div>
+      </div> 
+      <div class="col-md-4 p-4">
+        <div class="card">
+          <div class="card-body">
+              <h5 class="card-title">Consultation Info</h5>
+          </div>
+          <div class="form-group px-3">
+              <label>Initial Consultation Date</label>
+              <input type="date" class="form-control" />
+              <button type="button" class="btn btn-success float-right mt-2">Save Details</button>
+          </div>
+          
+        </div>
+
+      </div>     
+      </div>
+  
   </div>
 </div>
