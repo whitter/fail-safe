@@ -38,12 +38,12 @@ export var allPatients:Patient [] = [
         {id:86, name: 'ECG'}
     ],
     treatments:[
-        { id: 1, name: 'IV Diuretic', color: '#f34343', completed: true},
-        { id: 2, name: 'ACE Inhibitors', color: '#6bbf20', completed: false},
-        { id: 3, name: 'Beta Blockers', color: '#6bbf20', completed: false},
-        { id: 3, name: 'MRA', color: '#6bbf20', completed: false},
-        { id: 3, name: 'Entresto', color: '#6bbf20', completed: false},
-        { id: 3, name: 'Nitrate/Hydralazine', color: '#2876c4', completed: false},
+        { id: 1, name: 'IV Diuretic', color: 'list-group-item-primary', completed: true},
+        { id: 2, name: 'ACE Inhibitors', color: 'list-group-item-success', completed: false},
+        { id: 3, name: 'Beta Blockers', color: 'list-group-item-success', completed: false},
+        { id: 3, name: 'MRA', color: 'list-group-item-success', completed: false},
+        { id: 3, name: 'Entresto', color: 'list-group-item-success', completed: false},
+        { id: 3, name: 'Nitrate/Hydralazine', color: 'list-group-item-dark', completed: false},
     ],
 
     ituSuitable: true,

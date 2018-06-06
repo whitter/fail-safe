@@ -55,21 +55,24 @@
           <dt>Co-Mobidities</dt>
           <dd>
             <ul class="list-group">
-              <li class="list-group-item" *ngFor="let m of p.coMorbities">{{m | json}}</li>
+              <li class="list-group-item" *ngFor="let m of p.coMorbities">{{m.name}}</li>
             </ul>
           </dd>
 
           <dt>Physical Examinations</dt>
           <dd>
-            <ul class="list-group">
-              <li class="list-group-item"  *ngFor="let ex of p.examinations">{{ex | json}}</li>
-            </ul>
+            <div class="list-group">
+              <a href="#" *ngFor="let ex of p.examinations" class="list-group-item list-group-item-action">{{ex.name}}</a>
+            </div>
           </dd>
 
           <dt>Treatment</dt>
           <dd>
               <ul class="list-group">
-                  <li class="list-group-item"  *ngFor="let tr of p.treatments">{{tr | json}}</li>
+                  <li class="list-group-item list-group-item-action" *ngFor="let tr of p.treatments" [ngClass]="tr.color" (click)="tr.completed = !tr.completed">
+                    <input type="checkbox" [(ngModel)]="tr.completed" class="mr-2" />
+                    <span>{{tr.name}}</span>
+                  </li>
                 </ul>
           </dd>
         </dl>
