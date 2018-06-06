@@ -30,7 +30,7 @@ export class LoadingscreenComponent implements OnInit {
         this.currentMessage = this.messages[this.count];
         this.count++;
       }
-    }, 1200);
+    }, 3000);
 
   }
 

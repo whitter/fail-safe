@@ -89,6 +89,100 @@
               </li>
             </ul>
 
+<<<<<<< .mine
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=======
+          <dt>Physical Examinations</dt>
+          <dd>
+            <div class="list-group">
+              <a href="#" *ngFor="let ex of p.examinations" class="list-group-item list-group-item-action">{{ex.name}}</a>
+            </div>
+          </dd>
+
+          <dt>Treatment</dt>
+          <dd>
+              <ul class="list-group">
+                  <li class="list-group-item list-group-item-action" *ngFor="let tr of p.treatments" [ngClass]="tr.color" (click)="tr.completed = !tr.completed">
+                    <input type="checkbox" [(ngModel)]="tr.completed" class="mr-2" />
+                    <span>{{tr.name}}</span>
+                  </li>
+                </ul>
+          </dd>
+
+          <dt>Ceiling of Care</dt>
+          <dd>
+            <ul class="list-group">
+              <li class="list-group-item list-group-item-action" (click)="p.ituSuitable = !p.ituSuitable">
+                <input type="checkbox" [(ngModel)]="p.ituSuitable" class="mr-2" />
+                <span>Suitable for ITU</span>
+              </li>
+              <li class="list-group-item list-group-item-action" (click)="p.ccuForCpap = !p.ccuForCpap">
+>>>>>>> .theirs
+          <dt>Ceiling of Care</dt>
+          <dd>
+            <ul class="list-group">
+              <li class="list-group-item list-group-item-action" (click)="p.ituSuitable = !p.ituSuitable">
+                <input type="checkbox" [(ngModel)]="p.ituSuitable" class="mr-2" />
+                <span>Suitable for ITU</span>
+              </li>
+              <li class="list-group-item list-group-item-action" (click)="p.ccuForCpap = !p.ccuForCpap">
+                  <input type="checkbox" [(ngModel)]="p.ccuForCpap" class="mr-2" />
+                  <span>CCU for CPAP</span>
+                </li>
+                <li class="list-group-item list-group-item-action" (click)="p.wardBasedCare = !p.wardBasedCare">
+                    <input type="checkbox" [(ngModel)]="p.wardBasedCare" class="mr-2" />
+                    <span>Ward based care</span>
+                  </li>
+            </ul>
+          </dd><<<<<<< .mine
+
+
+
+
+
+
+
+
+
+=======
+                  <span>CCU for CPAP</span>
+                </li>
+                <li class="list-group-item list-group-item-action" (click)="p.wardBasedCare = !p.wardBasedCare">
+                    <input type="checkbox" [(ngModel)]="p.wardBasedCare" class="mr-2" />
+                    <span>Ward based care</span>
+                  </li>
+            </ul>
+          </dd>
+        </dl>
+>>>>>>> .theirs
+
+        <div class="form-group">
+          <label>Initial Consultation Date</label>
+          <input type="date" class="form-control" />
         </div>
       </div>
     </div>

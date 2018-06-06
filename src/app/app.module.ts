@@ -6,6 +6,7 @@ import { LoadingscreenComponent } from './components/loadingscreen/loadingscreen
 import { PatientListComponent } from './components/patient-list/patient-list.component';
 import { Routes, RouterModule } from '@angular/router';
 import { PatientInfoComponent } from './components/patient-info/patient-info.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { PatientInfoComponent } from './components/patient-info/patient-info.com
       },
       { path: 'patient-list', component: PatientListComponent },
       { path: 'patient-info', component: PatientInfoComponent }
-    ])
+    ]),
+    NgbModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
