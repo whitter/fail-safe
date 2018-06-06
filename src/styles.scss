@@ -1,0 +1,88 @@
+/* You can add global styles to this file, and also import other style files */
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+$primary: #00bce2;
+$primary-dark: #3e637d;
+$primary-darker: #3a5a71;
+
+
+.nav-item{
+    .h1{
+        margin: 0;
+        color: white;
+        background-color: $primary-darker;
+    }
+}
+
+dl:after {content:"";display:table;clear:both;}
+dd {
+    padding:.5em 0;
+}
+dl {
+    width:100%;
+}
+dt, dd {
+    display:inline-block;
+    width:30%;
+}
+dt {
+    text-align:left;
+    font-weight:bold;
+    clear:left;
+    float:left;
+}
+dd {
+    width:70%;
+    padding-left:1em;
+    clear:right;
+}
+dd + dd {
+    float:right;
+    clear:both;
+}
+dt:first-child {
+    padding-top:.5em;
+}
+dd + dt {
+   clear:both;
+    padding-top:.5em;
+}
+dt + dt {
+    width: 100%;
+    float: none;
+    padding: 0 70% 0 0;
+}
+dt + dt + dd {
+    margin-top: -2em;
+}
+dt + dt + dd + dt {
+    margin-top: 2em;
+}
+
+.primary-dark{
+    background-color: $primary-dark;
+}
+.primary-darker{
+    background-color: $primary-darker;
+}
+.bg-primary{
+    background-color: $primary!important;
+}
+
+.patient-info{
+    .patient-data, .patient-detail{
+        padding: 20px;
+    }
+    dl{
+        color:#a1bcce;
+    }
+}
+
+.patient-detail{
+    color: white;
+    h5{
+        font-size: 1rem;
+    }
+}
+
+

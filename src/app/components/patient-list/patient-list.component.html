@@ -1,0 +1,12 @@
+<div class="card">
+    <div class="card-body">
+      <h4 class="card-title">New Patients</h4>
+      <p class="card-text">showing</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item list-group-item-action" *ngFor="let p of patients" (click)="selectPatient(p)">
+        {{p.name}}
+      </li>
+      
+    </ul>
+  </div>
