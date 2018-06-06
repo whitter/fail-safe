@@ -4,6 +4,7 @@ import * as moment from 'moment';
 export var allPatients:Patient [] = [
  
 {
+    id: 1,
     name:'Harry Keshav',
     dob: moment('1948-04-05'),
     gender:'Maleng serve',
@@ -32,7 +33,7 @@ export var allPatients:Patient [] = [
         { name: 'Diabetes', id:1}
     ],
     examinations:[
-        { id:2, name:'Kidney Function'},
+        {id:2, name:'Kidney Function'},
         {id:43, name: 'BP'},
         {id:1, name: 'Rhythm'},
         {id:86, name: 'ECG'}

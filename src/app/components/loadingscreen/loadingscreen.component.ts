@@ -23,7 +23,7 @@ export class LoadingscreenComponent implements OnInit {
 
     let timer = setInterval(() =>{
       console.log(this.count)
-      if(this.count > this.messages.length){
+      if(this.count == this.messages.length){
         clearInterval(timer);
         this.router.navigate(['patient-list']);
       }else{
