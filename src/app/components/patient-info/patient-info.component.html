@@ -75,6 +75,24 @@
                   </li>
                 </ul>
           </dd>
+
+          <dt>Ceiling of Care</dt>
+          <dd>
+            <ul class="list-group">
+              <li class="list-group-item list-group-item-action" (click)="p.ituSuitable = !p.ituSuitable">
+                <input type="checkbox" [(ngModel)]="p.ituSuitable" class="mr-2" />
+                <span>Suitable for ITU</span>
+              </li>
+              <li class="list-group-item list-group-item-action" (click)="p.ccuForCpap = !p.ccuForCpap">
+                  <input type="checkbox" [(ngModel)]="p.ccuForCpap" class="mr-2" />
+                  <span>CCU for CPAP</span>
+                </li>
+                <li class="list-group-item list-group-item-action" (click)="p.wardBasedCare = !p.wardBasedCare">
+                    <input type="checkbox" [(ngModel)]="p.wardBasedCare" class="mr-2" />
+                    <span>Ward based care</span>
+                  </li>
+            </ul>
+          </dd>
         </dl>
       </div>
     </div>
