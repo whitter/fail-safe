@@ -8,6 +8,7 @@ import { Treatment } from "./treatment";
 import { Consultation } from "./consultation";
 
 export interface Patient{
+    id: number;
     name:string;
     dob:Moment;
     gender:string;

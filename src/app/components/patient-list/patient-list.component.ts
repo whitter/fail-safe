@@ -20,7 +20,6 @@ export class PatientListComponent implements OnInit {
 
 
   selectPatient(p:Patient){
-    console.log(p);
     this.router.navigate(['patient-info']);
   }
 

@@ -1,12 +1,34 @@
-<div class="card">
-    <div class="card-body">
-      <h4 class="card-title">New Patients</h4>
-      <p class="card-text">showing</p>
-    </div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item list-group-item-action" *ngFor="let p of patients" (click)="selectPatient(p)">
-        {{p.name}}
-      </li>
-      
-    </ul>
+<div class="m-4">
+      <h2>New Patients</h2>
+
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th></th>
+            <th></th>
+            <th class="text-center" style="width: 50px;">D</th>
+            <th class="text-center" style="width: 50px;">E</th>
+            <th class="text-center" style="width: 50px;">C</th>
+            <th class="text-center" style="width: 50px;">P</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let p of patients" (click)="selectPatient(p)">
+            <td>{{p.name}}</td>
+            <td>{{p.ward.name}}</td>
+            <td class="text-center"><span class="fas fa-check"></span></td>
+            <td class="text-center"><span class="fas fa-check"></span></td>
+            <td class="text-center"><span class="fas fa-check"></span></td>
+            <td class="text-center"><span class="fas fa-check"></span></td>
+          </tr>
+          <tr>
+            <td>John Smith</td>
+            <td>Ward 3<br/>Bed 2</td>
+            <td class="text-center"><span class="fas fa-check"></span></td>
+            <td class="text-center"></td>
+            <td class="text-center"></td>
+            <td class="text-center"></td>
+          </tr>
+        </tbody>
+      </table>
   </div>
