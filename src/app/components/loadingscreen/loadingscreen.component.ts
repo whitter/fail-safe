@@ -21,9 +21,10 @@ export class LoadingscreenComponent implements OnInit {
 
   ngOnInit() {
 
-    setInterval(() =>{
+    let timer = setInterval(() =>{
       console.log(this.count)
       if(this.count > this.messages.length){
+        clearInterval(timer);
         this.router.navigate(['patient-list']);
       }else{
         this.currentMessage = this.messages[this.count];
