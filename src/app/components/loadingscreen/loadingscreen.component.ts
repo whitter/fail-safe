@@ -8,13 +8,13 @@ import { Router } from '@angular/router';
 })
 export class LoadingscreenComponent implements OnInit {
 
-  currentMessage:string;
+  currentMessage:string = 'Searching ...';
   count:number = 0;
   messages = [
-    'bp',
-    'iv diuretic',
-    'echocardiogram',
-    'chest x-ray'
+    'Prescribing database',
+    'ECHO database',
+    'Radiology database',
+    'Biochemistry database'
   ];
 
   constructor(private router:Router) { }
