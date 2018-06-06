@@ -6,7 +6,7 @@ export var allPatients:Patient [] = [
 {
     name:'Harry Keshav',
     dob: moment('1948-04-05'),
-    gender:'Male',
+    gender:'Maleng serve',
     postcode:'B13 8TF',
     admissionDate: moment( '2018-03-27'),
     gp: {
@@ -24,6 +24,7 @@ export var allPatients:Patient [] = [
         id:1,
         name:'MAU',
     },
+    
 
     hfType: HFType.HFREF,
     aetiology: Aetiology.Ischemic,
